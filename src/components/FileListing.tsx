@@ -30,7 +30,6 @@ import MarkdownPreview from './previews/MarkdownPreview'
 import CodePreview from './previews/CodePreview'
 import OfficePreview from './previews/OfficePreview'
 import AudioPreview from './previews/AudioPreview'
-import VideoPreview from './previews/VideoPreview'
 import PDFPreview from './previews/PDFPreview'
 import URLPreview from './previews/URLPreview'
 import ImagePreview from './previews/ImagePreview'
@@ -406,9 +405,6 @@ const FileListing: FC<{ query?: ParsedUrlQuery }> = ({ query }) => {
 
         case preview.markdown:
           return <MarkdownPreview file={file} path={path} />
-
-        case preview.video:
-          return <VideoPreview file={file} />
 
         case preview.audio:
           return <AudioPreview file={file} />
